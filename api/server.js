@@ -1,7 +1,7 @@
 const express = require("express")
 
 const server = express()
-
-// SİHRİNİZİ GÖSTERİN
+server.use(express.json())
+server.use("/api/cars", require("./cars/cars-router"));
 
 module.exports = server
